@@ -1,0 +1,9 @@
+[submodule "FreeCAD"]
+	path = FreeCAD
+	url = https://github.com/FreeCAD/FreeCAD.git
+[submodule "FreeCAD-addons"]
+	path = FreeCAD-addons
+	url = https://github.com/FreeCAD/FreeCAD-addons.git
+[submodule "FreeCAD-library"]
+	path = FreeCAD-library
+	url = https://github.com/FreeCAD/FreeCAD-library.git
