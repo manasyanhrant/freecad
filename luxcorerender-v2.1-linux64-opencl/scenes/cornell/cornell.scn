@@ -1,0 +1,34 @@
+scene.camera.lookat = -2.78 -8. 2.73 -2.78 2. 2.73
+scene.camera.fieldofview = 39.1463
+################################################################################
+scene.materials.Khaki.type = matte
+scene.materials.Khaki.kd = 1. 0.824176 0.549451
+scene.materials.HalveRed.type = matte
+scene.materials.HalveRed.kd = 0.70003 0. 0.
+scene.materials.DarkGreen.type = matte
+scene.materials.DarkGreen.kd = 0. 0.4 0.
+scene.materials.Light.type = matte
+scene.materials.Light.emission = 10. 10. 10.
+#scene.materials.Light.emission.directlightsampling.type = DISABLED
+#scene.materials.Light.emission.theta = 20.0
+scene.materials.Light.kd = 0.75 0.75 0.75
+################################################################################
+scene.objects.Khaki.material = Khaki
+scene.objects.Khaki.ply = scenes/cornell/Khaki.ply
+scene.objects.HalveRed.material = HalveRed
+scene.objects.HalveRed.ply = scenes/cornell/HalveRed.ply
+scene.objects.DarkGreen.material = DarkGreen
+scene.objects.DarkGreen.ply = scenes/cornell/DarkGreen.ply
+################################################################################
+scene.objects.Grey.material = Light
+scene.objects.Grey.ply = scenes/cornell/Grey.ply
+#scene.lights.l1.type = point
+#scene.lights.l1.position = -2.78 2.79 4
+##scene.lights.l1.radius = 0.5
+#scene.lights.l1.power = 10
+#scene.lights.l1.efficency = 17
+#scene.lights.l2.type = point
+##scene.lights.l2.color = 0 0 1
+#scene.lights.l2.position = -2.78 2.79 2
+#scene.lights.l2.power = 10
+#scene.lights.l2.efficency = 17
