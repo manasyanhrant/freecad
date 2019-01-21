@@ -17,12 +17,8 @@ install_prerequisites(){
 	libboost-python-dev libqt4-dev libqt4-opengl-dev qt4-dev-tools \
 	python-dev python-pyside pyside-tools libeigen3-dev libqtwebkit-dev \
 	libshiboken-dev libpyside-dev libode-dev swig libzipios++-dev \
-	libfreetype6-dev liboce-foundation-dev liboce-modeling-dev \
-	liboce-ocaf-dev liboce-visualization-dev liboce-ocaf-lite-dev \
-	libsimage-dev checkinstall python-pivy python-qt4 doxygen libspnav-dev \
-	oce-draw liboce-foundation-dev liboce-modeling-dev liboce-ocaf-dev \
-	liboce-ocaf-lite-dev liboce-visualization-dev libmedc-dev libvtk6-dev \
-	libproj-dev 
+	libfreetype6-dev libsimage-dev checkinstall python-pivy python-qt4 \
+    doxygen libspnav-dev libmedc-dev libvtk6-dev libproj-dev 
 	check_for_error $? "Installing prerequsites"
 }
 
@@ -37,8 +33,20 @@ build_freecad(){
 	cd -
 }
 
+install_liboce(){
+    #sudo apt install -y oce-draw liboce-foundation-dev liboce-modeling-dev \
+    #liboce-ocaf-dev liboce-ocaf-lite-dev liboce-visualization-dev \ 
+    #1. liboce-foundation11
+    if ! sudo apt-get install -y ./deb/*.deb; then
+        sudo apt-get install -f -y
+        echo "Error: Oce library installation failed"
+        exit 1
+    fi
+}
+
 main(){
 	install_prerequisites
+    install_liboce
 	build_freecad
 }
 
